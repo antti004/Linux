@@ -9,3 +9,5 @@ alias docker-rm-containers='docker rmi -f$(docker ps -a -q)'
 alias log-cron='sudo grep --color -i cron /var/log/syslog' 
 
 tmux-end='tmux kill-session'
+
+netstat-open='netstat -plnt'

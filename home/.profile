@@ -1,9 +1,22 @@
 #!/bin/bash
 
+
+GREEN=$(tput setaf 2)
+YELLOW=$(tput setaf 3)
+RED=$(tput setaf 1)
+COLOR=$(tput sgr0)
+
+
+dcoker-cleanup(){
+   docker rm -v $(docker ps --filter status=exited -q 2>/dev/null) 2>/dev/null 
+   docker rmi $(docker images --filter dangling=true -q 2>/dev/null) 2>/dev/null 
+}
+
+
 git-push()
 {
 	if [ -z $@ ] ; then
-		echo "Commit message not given!"
+		echo "${YELLOW}Commit message not given!${COLOR}"
 	else
   	    git add --all .
 		git commit -a -m "$@" 
