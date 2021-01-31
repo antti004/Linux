@@ -61,3 +61,6 @@ function extract {
     done
 fi
 }
+
+
+. ./utils_docker.sh
