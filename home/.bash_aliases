@@ -11,3 +11,6 @@ alias log-cron='sudo grep --color -i cron /var/log/syslog'
 tmux-end='tmux kill-session'
 
 netstat-open='netstat -plnt'
+
+alias ll='ls -l'
+alias la='ls -la'
