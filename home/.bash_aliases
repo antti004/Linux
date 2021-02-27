@@ -23,3 +23,6 @@ alias la='ls -la'
 alias git-reset="git fetch && git reset --hard @{u}"
 
 alias lc="ls --color=auto"
+
+
+alias ip-addr="ip -br -4 -c addr show"
