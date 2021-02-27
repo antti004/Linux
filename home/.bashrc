@@ -116,4 +116,4 @@ fi
 
 
 ## custom aliases
-. ~/Linux/home/aliases.conf
+

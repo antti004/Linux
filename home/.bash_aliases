@@ -21,3 +21,5 @@ alias la='ls -la'
 
 # GIT
 alias git-reset="git fetch && git reset --hard @{u}"
+
+alias lc="ls --color=auto"
