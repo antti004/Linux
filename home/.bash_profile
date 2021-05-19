@@ -24,5 +24,8 @@ alias git-reset="git fetch && git reset --hard @{u}"
 
 alias lc="ls --color=auto"
 
+alias ip-addr="ip -br -4 -c addr list"
 
-alias ip-addr="ip -br -4 -c addr show"
+# Node-Red (might need to use sudo)
+alias node-red-log="journalctl -f -u nodered -o cat"
+
