@@ -2,7 +2,7 @@
 clear
 apt-get update
 apt-get -y dist-upgrade
-apt-get install -y zsh htop vim git tmux apt-transport-https zip unzip software-properties-common multitail
+apt-get install -y zsh htop vim git tmux apt-transport-https zip unzip software-properties-common multitail exa
 sudo chsh -s $(which zsh) $USER
 
 sh -c "echo Europe/Tallinn > /etc/timezone"
