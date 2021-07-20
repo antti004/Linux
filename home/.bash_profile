@@ -18,6 +18,7 @@ alias netstat-open='netstat -plnt'
 # Common
 alias ll='ls -l'
 alias la='ls -la'
+alias dir='exa -lTF'
 
 # GIT
 alias git-reset="git fetch && git reset --hard @{u}"
