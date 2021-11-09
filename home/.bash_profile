@@ -27,6 +27,7 @@ alias ls-size='du -cksh * | sort -hr | head -n 15'
 
 # GIT
 alias git-reset="git fetch && git reset --hard @{u}"
+alias git-push='git add . && git commit -a -m "Fast update" && git push'
 
 alias lc="ls --color=auto"
 
@@ -35,4 +36,7 @@ alias ip-addr="ip -br -4 -c addr list"
 # Node-Red (might need to use sudo)
 alias log-nodered="journalctl -f -u nodered -o cat"
 
+
+# Networking
+alias ssh-tunnels='ss -nltp4 | grep :20'
 
