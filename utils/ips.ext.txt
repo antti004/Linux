@@ -1,0 +1,376 @@
+10.0.1.1
+10.0.1.4
+10.0.1.5
+10.0.1.6
+10.0.1.7
+10.0.1.50
+10.0.1.53
+10.0.1.55
+10.0.1.56
+10.0.1.58
+10.0.1.59
+10.0.1.65
+10.0.1.70
+10.0.1.71
+10.0.1.80
+10.0.1.81
+10.0.1.83
+10.0.1.84
+10.0.1.91
+10.0.1.92
+10.0.1.1
+10.0.1.4
+10.0.1.5
+10.0.1.6
+10.0.1.7
+10.0.1.50
+10.0.1.53
+10.0.1.55
+10.0.1.56
+10.0.1.58
+10.0.1.59
+10.0.1.65
+10.0.1.70
+10.0.1.71
+10.0.1.80
+10.0.1.81
+10.0.1.83
+10.0.1.84
+10.0.1.91
+10.0.1.92
+10.0.1.1
+Starting Nmap 7.70 ( https://nmap.org ) at 2021-11-13 16:20 EET
+Nmap scan report for 10.0.1.1
+Host is up (0.0051s latency).
+Not shown: 993 closed ports
+PORT     STATE SERVICE
+21/tcp   open  ftp
+22/tcp   open  ssh
+23/tcp   open  telnet
+53/tcp   open  domain
+80/tcp   open  http
+2000/tcp open  cisco-sccp
+8291/tcp open  unknown
+MAC Address: 66:D1:54:52:3A:F0 (Unknown)
+Device type: general purpose
+Running: Linux 2.6.X|3.X
+OS CPE: cpe:/o:linux:linux_kernel:2.6 cpe:/o:linux:linux_kernel:3
+OS details: Linux 2.6.32 - 3.10
+Network Distance: 1 hop
+
+OS detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 4.80 seconds
+10.0.1.4
+Starting Nmap 7.70 ( https://nmap.org ) at 2021-11-13 16:20 EET
+Nmap scan report for 10.0.1.4
+Host is up (0.0021s latency).
+Not shown: 988 closed ports
+PORT     STATE SERVICE
+22/tcp   open  ssh
+80/tcp   open  http
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+3000/tcp open  ppp
+3306/tcp open  mysql
+8008/tcp open  http
+8080/tcp open  http-proxy
+8086/tcp open  d-s-n
+8200/tcp open  trivnet1
+9000/tcp open  cslistener
+9091/tcp open  xmltec-xmlmail
+MAC Address: 40:8D:5C:FC:2E:B4 (Giga-byte Technology)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.70%E=4%D=11/13%OT=22%CT=1%CU=33251%PV=Y%DS=1%DC=D%G=Y%M=408D5C%
+OS:TM=618FC9B3%P=arm-unknown-linux-gnueabihf)SEQ(SP=100%GCD=1%ISR=10F%TI=Z%
+OS:CI=Z%TS=A)SEQ(SP=100%GCD=1%ISR=10F%TI=Z%CI=Z%II=I%TS=A)OPS(O1=M5B4ST11NW
+OS:7%O2=M5B4ST11NW7%O3=M5B4NNT11NW7%O4=M5B4ST11NW7%O5=M5B4ST11NW7%O6=M5B4ST
+OS:11)WIN(W1=FE88%W2=FE88%W3=FE88%W4=FE88%W5=FE88%W6=FE88)ECN(R=Y%DF=Y%T=40
+OS:%W=FAF0%O=M5B4NNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R
+OS:=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W
+OS:=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)
+OS:T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%IPL=164%U
+OS:N=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Network Distance: 1 hop
+
+OS detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 17.15 seconds
+10.0.1.5
+Starting Nmap 7.70 ( https://nmap.org ) at 2021-11-13 16:20 EET
+Nmap scan report for 10.0.1.5
+Host is up (0.0017s latency).
+Not shown: 997 closed ports
+PORT     STATE SERVICE
+22/tcp   open  ssh
+111/tcp  open  rpcbind
+3128/tcp open  squid-http
+MAC Address: F2:A5:E1:FB:81:51 (Unknown)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.70%E=4%D=11/13%OT=22%CT=1%CU=40417%PV=Y%DS=1%DC=D%G=Y%M=F2A5E1%
+OS:TM=618FC9C3%P=arm-unknown-linux-gnueabihf)SEQ(SP=103%GCD=1%ISR=10E%TI=Z%
+OS:CI=Z%TS=A)SEQ(SP=103%GCD=1%ISR=10E%TI=Z%CI=Z%II=I%TS=A)OPS(O1=M5B4ST11NW
+OS:7%O2=M5B4ST11NW7%O3=M5B4NNT11NW7%O4=M5B4ST11NW7%O5=M5B4ST11NW7%O6=M5B4ST
+OS:11)WIN(W1=FE88%W2=FE88%W3=FE88%W4=FE88%W5=FE88%W6=FE88)ECN(R=Y%DF=Y%T=40
+OS:%W=FAF0%O=M5B4NNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R
+OS:=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W
+OS:=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)
+OS:T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%IPL=164%U
+OS:N=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Network Distance: 1 hop
+
+OS detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 15.81 seconds
+10.0.1.6
+Starting Nmap 7.70 ( https://nmap.org ) at 2021-11-13 16:20 EET
+Nmap scan report for 10.0.1.6
+Host is up (0.0045s latency).
+Not shown: 996 closed ports
+PORT      STATE SERVICE
+22/tcp    open  ssh
+80/tcp    open  http
+443/tcp   open  https
+10001/tcp open  scp-config
+MAC Address: 00:27:22:A4:C3:8D (Ubiquiti Networks)
+Device type: general purpose|WAP
+Running: Linux 2.6.X, Ubiquiti AirOS 5.X
+OS CPE: cpe:/o:linux:linux_kernel:2.6.32 cpe:/o:ubnt:airos:5.6.2
+OS details: Linux 2.6.32, Ubiquiti AirOS 5.6.2 (Linux 2.6.32)
+Network Distance: 1 hop
+
+OS detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 3.63 seconds
+10.0.1.7
+Starting Nmap 7.70 ( https://nmap.org ) at 2021-11-13 16:20 EET
+Nmap scan report for 10.0.1.7
+Host is up (0.0019s latency).
+Not shown: 993 closed ports
+PORT     STATE SERVICE
+22/tcp   open  ssh
+1433/tcp open  ms-sql-s
+2003/tcp open  finger
+3000/tcp open  ppp
+8002/tcp open  teradataordbms
+8086/tcp open  d-s-n
+9002/tcp open  dynamid
+MAC Address: 00:22:4D:B7:B4:CC (Mitac International)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.70%E=4%D=11/13%OT=22%CT=1%CU=37460%PV=Y%DS=1%DC=D%G=Y%M=00224D%
+OS:TM=618FC9D8%P=arm-unknown-linux-gnueabihf)SEQ(SP=FD%GCD=5%ISR=10B%TI=Z%C
+OS:I=Z%TS=A)SEQ(SP=FD%GCD=1%ISR=10B%TI=Z%CI=Z%II=I%TS=A)OPS(O1=M5B4ST11NW7%
+OS:O2=M5B4ST11NW7%O3=M5B4NNT11NW7%O4=M5B4ST11NW7%O5=M5B4ST11NW7%O6=M5B4ST11
+OS:)WIN(W1=FE88%W2=FE88%W3=FE88%W4=FE88%W5=FE88%W6=FE88)ECN(R=Y%DF=Y%T=40%W
+OS:=FAF0%O=M5B4NNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N
+OS:)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0
+OS:%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7
+OS:(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%IPL=164%UN=
+OS:0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Network Distance: 1 hop
+
+OS detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 17.28 seconds
+10.0.1.50
+Starting Nmap 7.70 ( https://nmap.org ) at 2021-11-13 16:21 EET
+Nmap scan report for 10.0.1.50
+Host is up (0.0035s latency).
+Not shown: 993 closed ports
+PORT     STATE SERVICE
+21/tcp   open  ftp
+22/tcp   open  ssh
+23/tcp   open  telnet
+53/tcp   open  domain
+80/tcp   open  http
+2000/tcp open  cisco-sccp
+8291/tcp open  unknown
+MAC Address: 6C:3B:6B:8B:76:D4 (Routerboard.com)
+Device type: general purpose
+Running: Linux 2.6.X|3.X
+OS CPE: cpe:/o:linux:linux_kernel:2.6 cpe:/o:linux:linux_kernel:3
+OS details: Linux 2.6.32 - 3.10
+Network Distance: 1 hop
+
+OS detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 4.86 seconds
+10.0.1.53
+Starting Nmap 7.70 ( https://nmap.org ) at 2021-11-13 16:21 EET
+Nmap scan report for 10.0.1.53
+Host is up (0.030s latency).
+All 1000 scanned ports on 10.0.1.53 are closed
+MAC Address: 1A:E7:C8:9E:1C:5F (Unknown)
+Too many fingerprints match this host to give specific OS details
+Network Distance: 1 hop
+
+OS detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 25.55 seconds
+10.0.1.55
+Starting Nmap 7.70 ( https://nmap.org ) at 2021-11-13 16:21 EET
+Nmap scan report for 10.0.1.55
+Host is up (0.0040s latency).
+Not shown: 993 closed ports
+PORT      STATE SERVICE
+1900/tcp  open  upnp
+5555/tcp  open  freeciv
+8008/tcp  open  http
+8009/tcp  open  ajp13
+8443/tcp  open  https-alt
+9000/tcp  open  cslistener
+49154/tcp open  unknown
+MAC Address: 1C:5A:6B:D2:6F:5F (Philips Electronics Nederland BV)
+Device type: phone
+Running: Google Android 5.X
+OS CPE: cpe:/o:google:android:5.1
+OS details: Android 5.1
+Network Distance: 1 hop
+
+OS detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 3.57 seconds
+10.0.1.56
+Starting Nmap 7.70 ( https://nmap.org ) at 2021-11-13 16:21 EET
+Nmap scan report for 10.0.1.56
+Host is up (0.012s latency).
+Not shown: 996 closed ports
+PORT     STATE SERVICE
+22/tcp   open  ssh
+80/tcp   open  http
+6000/tcp open  X11
+6001/tcp open  X11:1
+MAC Address: 76:19:AE:76:19:AE (Unknown)
+Device type: general purpose
+Running: Linux 2.6.X
+OS CPE: cpe:/o:linux:linux_kernel:2.6
+OS details: Linux 2.6.17 - 2.6.36
+Network Distance: 1 hop
+
+OS detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 3.75 seconds
+10.0.1.58
+Starting Nmap 7.70 ( https://nmap.org ) at 2021-11-13 16:21 EET
+Nmap scan report for 10.0.1.58
+Host is up (0.022s latency).
+All 1000 scanned ports on 10.0.1.58 are closed
+MAC Address: E4:0E:EE:C5:73:C5 (Huawei Technologies)
+Device type: remote management|phone|general purpose|webcam|storage-misc
+Running: Avocent embedded, Google Android 2.X, Linux 2.6.X|3.X, AXIS embedded, ZyXEL embedded
+OS CPE: cpe:/o:google:android:2.2 cpe:/o:linux:linux_kernel:2.6 cpe:/o:linux:linux_kernel:2.6.17 cpe:/h:axis:210a_network_camera cpe:/h:axis:211_network_camera cpe:/o:linux:linux_kernel:3.13 cpe:/h:zyxel:nsa-210
+Too many fingerprints match this host to give specific OS details
+Network Distance: 1 hop
+
+OS detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 6.46 seconds
+10.0.1.59
+Starting Nmap 7.70 ( https://nmap.org ) at 2021-11-13 16:21 EET
+Nmap scan report for 10.0.1.59
+Host is up (0.026s latency).
+All 1000 scanned ports on 10.0.1.59 are closed
+MAC Address: 00:06:22:00:01:B5 (Chung Fu Chen Yeh Enterprise)
+Too many fingerprints match this host to give specific OS details
+Network Distance: 1 hop
+
+OS detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 16.91 seconds
+10.0.1.65
+Starting Nmap 7.70 ( https://nmap.org ) at 2021-11-13 16:22 EET
+Note: Host seems down. If it is really up, but blocking our ping probes, try -Pn
+Nmap done: 1 IP address (0 hosts up) scanned in 1.44 seconds
+10.0.1.70
+Starting Nmap 7.70 ( https://nmap.org ) at 2021-11-13 16:22 EET
+Note: Host seems down. If it is really up, but blocking our ping probes, try -Pn
+Nmap done: 1 IP address (0 hosts up) scanned in 1.52 seconds
+10.0.1.71
+Starting Nmap 7.70 ( https://nmap.org ) at 2021-11-13 16:22 EET
+Note: Host seems down. If it is really up, but blocking our ping probes, try -Pn
+Nmap done: 1 IP address (0 hosts up) scanned in 1.51 seconds
+10.0.1.80
+Starting Nmap 7.70 ( https://nmap.org ) at 2021-11-13 16:22 EET
+Nmap scan report for 10.0.1.80
+Host is up (0.00054s latency).
+Not shown: 998 closed ports
+PORT     STATE SERVICE
+22/tcp   open  ssh
+8001/tcp open  vcom-tunnel
+Device type: general purpose
+Running: Linux 2.6.X
+OS CPE: cpe:/o:linux:linux_kernel:2.6.32
+OS details: Linux 2.6.32
+Network Distance: 0 hops
+
+OS detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 3.46 seconds
+10.0.1.81
+Starting Nmap 7.70 ( https://nmap.org ) at 2021-11-13 16:22 EET
+Nmap scan report for 10.0.1.81
+Host is up (0.0069s latency).
+Not shown: 997 closed ports
+PORT     STATE SERVICE
+80/tcp   open  http
+554/tcp  open  rtsp
+1935/tcp open  rtmp
+MAC Address: 24:52:6A:A9:F2:93 (Zhejiang Dahua Technology)
+Device type: general purpose
+Running: Linux 3.X|4.X
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4
+OS details: Linux 3.2 - 4.9
+Network Distance: 1 hop
+
+OS detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 3.70 seconds
+10.0.1.83
+Starting Nmap 7.70 ( https://nmap.org ) at 2021-11-13 16:22 EET
+Note: Host seems down. If it is really up, but blocking our ping probes, try -Pn
+Nmap done: 1 IP address (0 hosts up) scanned in 1.47 seconds
+10.0.1.84
+Starting Nmap 7.70 ( https://nmap.org ) at 2021-11-13 16:22 EET
+Note: Host seems down. If it is really up, but blocking our ping probes, try -Pn
+Nmap done: 1 IP address (0 hosts up) scanned in 1.50 seconds
+10.0.1.91
+Starting Nmap 7.70 ( https://nmap.org ) at 2021-11-13 16:22 EET
+Nmap scan report for 10.0.1.91
+Host is up (0.0034s latency).
+Not shown: 993 closed ports
+PORT      STATE SERVICE
+1900/tcp  open  upnp
+5555/tcp  open  freeciv
+8008/tcp  open  http
+8009/tcp  open  ajp13
+8443/tcp  open  https-alt
+9000/tcp  open  cslistener
+49154/tcp open  unknown
+MAC Address: 1C:5A:6B:D2:6F:5F (Philips Electronics Nederland BV)
+Device type: phone
+Running: Google Android 5.X|7.X, Linux 3.X
+OS CPE: cpe:/o:google:android:5.1 cpe:/o:google:android:7.1.2 cpe:/o:linux:linux_kernel:3.4
+OS details: Android 5.1, Android 7.1.2 (Linux 3.4)
+Network Distance: 1 hop
+
+OS detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 3.74 seconds
+10.0.1.92
+Starting Nmap 7.70 ( https://nmap.org ) at 2021-11-13 16:22 EET
+Nmap scan report for 10.0.1.92
+Host is up (0.0098s latency).
+Not shown: 999 closed ports
+PORT     STATE SERVICE
+6668/tcp open  irc
+MAC Address: 70:89:76:91:CD:33 (Unknown)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.70%E=4%D=11/13%OT=6668%CT=1%CU=34131%PV=Y%DS=1%DC=D%G=Y%M=70897
+OS:6%TM=618FCA3B%P=arm-unknown-linux-gnueabihf)SEQ(SP=BC%GCD=1%ISR=C8%TI=I%
+OS:CI=I%TS=U)SEQ(SP=6D%GCD=1%ISR=C6%TI=I%CI=I%II=RI%SS=O%TS=U)OPS(O1=M5B4%O
+OS:2=M5B4%O3=M5B4%O4=M5B4%O5=M5B4%O6=M5B4)WIN(W1=111C%W2=111C%W3=111C%W4=11
+OS:1C%W5=111C%W6=111C)ECN(R=Y%DF=N%T=FF%W=111C%O=M5B4%CC=N%Q=)T1(R=Y%DF=N%T
+OS:=FF%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=Y%DF=N%T=FF%W=111C%S=O%A=S+%F=AS%O
+OS:=M5B4%RD=0%Q=)T4(R=Y%DF=N%T=FF%W=111C%S=A%A=S%F=AR%O=%RD=0%Q=)T5(R=Y%DF=
+OS:N%T=FF%W=111C%S=A%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=N%T=FF%W=111C%S=A%A=S%F
+OS:=AR%O=%RD=0%Q=)T7(R=Y%DF=N%T=FF%W=111C%S=A%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%D
+OS:F=N%T=FF%IPL=38%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=S%T=FF
+OS:%CD=S)
+
+Network Distance: 1 hop
+
+OS detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 18.27 seconds
