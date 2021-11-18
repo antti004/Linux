@@ -1,3 +1,6 @@
+# Reload bash
+alias reload='source ~/.bashrc'
+
 #### Docker aliases
 alias dc-ip='docker inspect -f "{{.Name}} - {{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}" $(docker ps -aq)'
 alias dc-ps='docker ps --format="table {{.Names}}\t{{.Status}}\t{{.Ports}}"'
@@ -11,7 +14,7 @@ alias dc-size="docker images --format 'table {{.Repository}}\t{{.Tag}}\t{{.ID}}\
 
 # LOG files aliases
 alias log-cron='sudo grep --color -i cron /var/log/syslog' 
-
+alias log-syslog='tail -f /var/log/syslog'
 
 alias tmux-end='tmux kill-session'
 
