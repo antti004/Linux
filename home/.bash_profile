@@ -1,3 +1,8 @@
+export DOTNET_ROOT=~/.dotnet
+export PATH=$PATH:$DOTNET_ROOT
+
+
+
 # Reload bash
 alias reload='source ~/.bashrc'
 
