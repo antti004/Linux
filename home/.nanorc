@@ -2,7 +2,7 @@ set speller "aspell -c -x"
 set autoindent
 set suspend
 set nohelp
-set morespace
+#set morespace
 set linenumbers
 set constantshow
 set positionlog
