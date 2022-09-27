@@ -35,7 +35,8 @@ alias ls-size='du -cksh * | sort -hr | head -n 15'
 
 # GIT
 alias git-reset="git fetch && git reset --hard @{u}"
-alias git-push='git add . && git commit -a -m "Fast update" && git push'
+#bash.rc alias git-push='git add . && git commit -a -m "Fast update" && git push'
+alias git-log='git log -n -5 --oneline'
 
 alias lc="ls --color=auto"
 
