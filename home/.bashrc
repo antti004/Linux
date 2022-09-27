@@ -4,7 +4,7 @@
 
 ## Git
 function git-push(){
-  git add .
-  git commit -a -m "$1" 
+  git add . &&
+  git commit -a -m "$(1)" && 
   git push
 }
