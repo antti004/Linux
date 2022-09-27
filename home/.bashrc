@@ -4,7 +4,9 @@
 
 ## Git
 function git-push(){
-  git add . &&
+  git add .
+  echo "Added files"
   git commit -a -m "$(1)" && 
+  echo "Commited '$1'"
   git push
 }
