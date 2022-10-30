@@ -4,8 +4,6 @@
 export DOTNET_ROOT=~/.dotnet
 export PATH=$PATH:$DOTNET_ROOT
 
-
-
 # Reload bash
 alias reload='source ~/.bashrc'
 
@@ -51,6 +49,7 @@ alias log-nodered="journalctl -f -u nodered -o cat"
 # Networking
 alias ssh-tunnels='ss -nltp4 | grep :20'
 
+<<<<<<< HEAD:home/.bash_profile
 echo "Bash profile v1.2"
 
 
@@ -58,3 +57,6 @@ if [ -f $HOME/.bashrc ]; then
         source $HOME/.bashrc
 fi
 
+=======
+source ./.bashrc
+>>>>>>> d851f99e75f58d5e0a4d6dc73f0083fbd984d1b3:.bash_profile

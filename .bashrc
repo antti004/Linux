@@ -44,7 +44,6 @@ function big-files() {
     du -h -x -s -- * | sort -r -h | head -20;
 }
 
-
 function git_branch() {
     if [ -d .git ] ; then
         printf "%s" "($(git branch 2> /dev/null | awk '/\*/{print $2}'))";
@@ -57,4 +56,3 @@ function prompt_1(){
 prompt_1
 
 
-echo ".bashrc v1.1"
