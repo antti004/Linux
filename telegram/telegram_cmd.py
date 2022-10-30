@@ -11,20 +11,51 @@ CHAT_ID=148204072
 
 #logging.basicConfig(level=logging.DEBUG,format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
+def msg_replay_post(text,msg_id):
+    tarUrl =URL+ f'/sendMessage'
+    body = {'chat_id':CHAT_ID,'text':text,'replay_to_message_id':msg_id}
+    resp = requests.post(tarUrl,json=body)
+    print(resp)
+
 
 def send_msg(msg,msg_id):
     query = urllib.parse.quote(msg)
     tarUrl =URL+ f'/sendMessage?chat_id={CHAT_ID}&text={msg}&reply_to_message_id={msg_id}'    
-#    resp = requests.get(tarUrl)
-#    print(resp)
+    resp = requests.get(tarUrl)
+
+def delete_msg(msg_id):
+    tarUrl =URL+ f'/deleteMessage?chat_id={CHAT_ID}&message_id={msg_id}'    
+    resp = requests.get(tarUrl)
+
+def edit_msg(msg_id,value):
+    prsValue = urllib.parse.quote(value)
+    tarUrl =URL+ f'/editMessageText?chat_id={CHAT_ID}&message_id={msg_id}&text={prsValue}'    
+    resp = requests.get(tarUrl)
 
 
 def get_latest():
-    tarUrl = f'{URL}/getUpdates'
+    tarUrl = f'{URL}/getUpdates?offset=-1'
     jsn = requests.get(tarUrl).json()
     results = jsn['result'] 
-    ar = results[len(results) - 1]
-    print(ar['message']['text'])
+    print("Latest count="+str(len(results)))
+    result = results[0]
+    date = result['message']['date']
+    msg_txt = result['message']['text'] 
+    msg_id = result['message']['message_id']
+ #   send_msg("Received",msg_id)
+#    delete_msg(msg_id)
+#    edit_msg(msg_id,"Processing")
+    msg_replay_post("done",msg_id)
+    print(f'{date} id={msg_id} {msg_txt}')
+    print(result)
+    return msg_id     
+
+def clear_latest(msg_id):
+    tarUrl = f'{URL}/getUpdates?offset=-{msg_id}'
+    jsn = requests.get(tarUrl).json()
+    resp = requests.get(tarUrl)
+    print(f'** Clear_latest')
+    print(resp)
 
 def get_updates():
     tarUrl = f'{URL}/getUpdates'
@@ -42,4 +73,5 @@ def get_updates():
 
 if __name__ == '__main__':
    #get_updates()
-   get_latest()
+   last_msg_id =get_latest()
+   clear_latest(last_msg_id)
