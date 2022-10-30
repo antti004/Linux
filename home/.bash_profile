@@ -1,3 +1,6 @@
+### .bash_profile is loaded for logn shells
+### .bashrc is loaded for non-login shells
+
 export DOTNET_ROOT=~/.dotnet
 export PATH=$PATH:$DOTNET_ROOT
 
@@ -19,7 +22,7 @@ alias dc-size="docker images --format 'table {{.Repository}}\t{{.Tag}}\t{{.ID}}\
 
 # LOG files aliases
 alias log-cron='sudo grep --color -i cron /var/log/syslog' 
-alias log-syslog='tail -f /var/log/syslog'
+alias log-sys='tail -f /var/log/syslog'
 
 alias tmux-end='tmux kill-session'
 
@@ -35,8 +38,7 @@ alias ls-size='du -cksh * | sort -hr | head -n 15'
 
 # GIT
 alias git-reset="git fetch && git reset --hard @{u}"
-#bash.rc alias git-push='git add . && git commit -a -m "Fast update" && git push'
-alias git-log='git log -n -5 --oneline'
+alias git-log='git log -n -5 --oneline --date=short'
 
 alias lc="ls --color=auto"
 
@@ -48,4 +50,11 @@ alias log-nodered="journalctl -f -u nodered -o cat"
 
 # Networking
 alias ssh-tunnels='ss -nltp4 | grep :20'
+
+echo "Bash profile v1.2"
+
+
+if [ -f $HOME/.bashrc ]; then
+        source $HOME/.bashrc
+fi
 

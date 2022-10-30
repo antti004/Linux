@@ -9,15 +9,15 @@ shopt -s histappend
 
 
 ## Colors
-BLK='\[\033[01;30m\]'   # Black
-RED='\[\033[01;31m\]'   # Red
-GRN='\[\033[01;32m\]'   # Green
-YLW='\[\033[01;33m\]'   # Yellow
-BLU='\[\033[01;34m\]'   # Blue
-PUR='\[\033[01;35m\]'   # Purple
-CYN='\[\033[01;36m\]'   # Cyan
-WHT='\[\033[01;37m\]'   # White
-CLR='\[\033[00m\]'      # Reset
+blk='\[\033[01;30m\]'   # Black
+red='\[\033[01;31m\]'   # Red
+grn='\[\033[01;32m\]'   # Green
+ylw='\[\033[01;33m\]'   # Yellow
+blu='\[\033[01;34m\]'   # Blue
+pur='\[\033[01;35m\]'   # Purple
+cyn='\[\033[01;36m\]'   # Cyan
+wht='\[\033[01;37m\]'   # White
+clr='\[\033[00m\]'      # Reset
 
 
 
@@ -36,14 +36,25 @@ alias ....='cd ../../..;pwd'
 ## Git
 function git-push(){
   git add .
-  echo "Added files"
   git commit -a -m "$1" && 
-  echo "Commited '$1'"
   git push
 }
 
-function find_largest_files() {
+function big-files() {
     du -h -x -s -- * | sort -r -h | head -20;
 }
 
-echo "BashRC loaded"
+
+function git_branch() {
+    if [ -d .git ] ; then
+        printf "%s" "($(git branch 2> /dev/null | awk '/\*/{print $2}'))";
+    fi
+}
+function prompt_1(){
+    PS1='${debian_chroot:+($debian_chroot)}'${blu}'$(git_branch)'${pur}' \W'${grn}' \$ '${clr}
+}
+
+prompt_1
+
+
+echo ".bashrc v1.1"
