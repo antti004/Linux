@@ -36,9 +36,15 @@ def edit_msg(msg_id,value):
 def get_latest():
     tarUrl = f'{URL}/getUpdates?offset=-1'
     jsn = requests.get(tarUrl).json()
+    print(jsn)
     results = jsn['result'] 
-    print("Latest count="+str(len(results)))
+    if(len(results)==0):
+        print("No more results")
+        return 0
     result = results[0]
+    update_id = result['update_id']
+    print(f'Latest count={len(results)} updateID={update_id}')
+
     date = result['message']['date']
     msg_txt = result['message']['text'] 
     msg_id = result['message']['message_id']
@@ -48,13 +54,13 @@ def get_latest():
     msg_replay_post("done",msg_id)
     print(f'{date} id={msg_id} {msg_txt}')
     print(result)
-    return msg_id     
+    return update_id     
 
-def clear_latest(msg_id):
-    tarUrl = f'{URL}/getUpdates?offset=-{msg_id}'
+def clear_latest(update_id):
+    tarUrl = f'{URL}/getUpdates?offset={update_id}'
     jsn = requests.get(tarUrl).json()
     resp = requests.get(tarUrl)
-    print(f'** Clear_latest')
+    print(f'** Clear_latest {update_id}')
     print(resp)
 
 def get_updates():
@@ -73,5 +79,6 @@ def get_updates():
 
 if __name__ == '__main__':
    #get_updates()
-   last_msg_id =get_latest()
-   clear_latest(last_msg_id)
+   update_id =get_latest()
+   if update_id > 0 :
+      clear_latest(update_id+1)
