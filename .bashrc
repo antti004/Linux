@@ -45,5 +45,3 @@ function git-push(){
 function find_largest_files() {
     du -h -x -s -- * | sort -r -h | head -20;
 }
-
-echo "BashRC loaded"

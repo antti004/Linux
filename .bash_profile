@@ -1,8 +1,6 @@
 export DOTNET_ROOT=~/.dotnet
 export PATH=$PATH:$DOTNET_ROOT
 
-
-
 # Reload bash
 alias reload='source ~/.bashrc'
 
@@ -49,3 +47,4 @@ alias log-nodered="journalctl -f -u nodered -o cat"
 # Networking
 alias ssh-tunnels='ss -nltp4 | grep :20'
 
+source ./.bashrc
