@@ -51,6 +51,6 @@ if __name__ == '__main__':
     if len(ar) == 0: 
        exit(0)
 
-    msg = ar.join(" ")
+    msg = " ".join(ar)
     msg_send(msg)
     print(ar)
