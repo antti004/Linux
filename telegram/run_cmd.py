@@ -97,12 +97,18 @@ def get_updates():
 
 def run_cmd(ar):
     print(ar)
-    if ar[1]=='reboot':
-       print("Rebooting")
-       ret = os.system("reboot &")
-       print(ret)
-#       subprocess.Popen(["reboot","now"])
+    if len(ar) < 1:
+       send_msg("Invalid command")
+       return
+    
+    cmd = ar[1]
 
+    if cmd == 'reboot':
+       os.system("reboot &")
+    
+    if cmd == 'test':
+       send_msg("Test executed")
+    
 
 
 
