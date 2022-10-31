@@ -4,6 +4,7 @@ import socket
 import urllib.parse
 import subprocess
 import os
+from urllib.request import urlopen
 
 TOKEN='301857222:AAGM2t25iCqIUYAVQT6yHdp8cR0wVJkMlHY' #aa_devices_bot
 #TOKEN='358875431:AAF_Xf2nHovO1iQ42lyczc5eN2egCpRh8XU' #aa_project_emu_bot
@@ -42,15 +43,30 @@ def run_cmd(ar):
 def reboot_needed():
     return os.path.exists('/var/run/reboot-required')
 
+def get_ip():
+    result=[l for l in ([ip for ip in socket.gethostbyname_ex(socket.gethostname())[2] 
+    if not ip.startswith("127.")][:1], [[(s.connect(('8.8.8.8', 53)), 
+    s.getsockname()[0], s.close()) for s in [socket.socket(socket.AF_INET, 
+    socket.SOCK_DGRAM)]][0][1]]) if l][0][0]
+    return result
+
+def get_ext_ip():
+    ext_ip = str(urlopen('https://api64.ipify.org/?format=text').read().decode())
+    return ext_ip
+
 
 if __name__ == '__main__':
     ar = []
+    ar.append("ip="+get_ip())
+    ar.append("ext_ip="+get_ext_ip())
+
+#    ar.append('\U00002757')
     if reboot_needed():
-      ar.append('xE2\x99\xBB')
+       ar.append('\U0000267B') #recycle
 
     if len(ar) == 0: 
        exit(0)
 
     msg = " ".join(ar)
     send_message(msg)
-    print(ar)
+    
