@@ -44,8 +44,13 @@ def reboot_needed():
 
 
 if __name__ == '__main__':
-   ar = []
-   if reboot_needed():
-      ar.append("reboot")
+    ar = []
+    if reboot_needed():
+      ar.append('xE2\x99\xBB')
 
-   print(ar)
+    if len(ar) == 0: 
+       exit(0)
+
+    msg = ar.join(" ")
+    msg_send(msg)
+    print(ar)
