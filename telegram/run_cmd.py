@@ -16,14 +16,11 @@ HOSTNAME = socket.gethostname()
 
 #logging.basicConfig(level=logging.DEBUG,format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
-def msg_replay_post(text,msg_id):
-    tarUrl =URL+ f'/sendMessage'
-    body = {'chat_id':CHAT_ID,'text':text,'reply_to_message_id':msg_id}
-    resp = requests.post(tarUrl,json=body)
 
 def send_message(text,reply_msg_id=0):
     tarUrl =URL+ f'/sendMessage'
-    body = {'chat_id':CHAT_ID,'text':HOSTNAME+ " "+text}
+    msg_txt = HOSTNAME+ " " +'\U00002b55'+ ' ' +text
+    body = {'chat_id':CHAT_ID,'text':msg_txt}
     if reply_msg_id > 0:
         body = {'chat_id':CHAT_ID,'text':HOSTNAME+ " "+text,'reply_to_message_id':msg_id}
     resp = requests.post(tarUrl,json=body)
@@ -102,14 +99,22 @@ def run_cmd(ar):
        return
     
     cmd = ar[1]
+    
 
     if cmd == 'reboot':
+       send_msg("rebooting")
        os.system("reboot &")
     
     if cmd == 'test':
        send_msg("Test executed")
     
+    if cmd == 'update':
+       send_msg("updateing")
+       os.system("apt get update &")
 
+    if cmd == 'upgrade':
+       send_msg("upgradeing")
+       os.system("apt get dist-upgrade -y &")
 
 
 if __name__ == '__main__':
