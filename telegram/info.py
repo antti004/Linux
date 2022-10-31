@@ -52,5 +52,5 @@ if __name__ == '__main__':
        exit(0)
 
     msg = " ".join(ar)
-    msg_send(msg)
+    send_message(msg)
     print(ar)
