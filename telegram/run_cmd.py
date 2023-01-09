@@ -4,8 +4,11 @@ import socket
 import urllib.parse
 import subprocess
 import os
+from urllib.request import urlopen
+import psutil
+import time
 
-VERSION="1.0"
+VERSION="1.1"
 
 TOKEN='301857222:AAGM2t25iCqIUYAVQT6yHdp8cR0wVJkMlHY' #aa_devices_bot
 #TOKEN='358875431:AAF_Xf2nHovO1iQ42lyczc5eN2egCpRh8XU' #aa_project_emu_bot
@@ -27,11 +30,6 @@ def send_msg(text,reply_msg_id=0):
         body = {'chat_id':CHAT_ID,'text':HOSTNAME+ " "+text,'reply_to_message_id':msg_id}
     resp = requests.post(tarUrl,json=body)
 
-
-def send_msg_OLD(msg,msg_id):
-    query = urllib.parse.quote(msg)
-    tarUrl =URL+ f'/sendMessage?chat_id={CHAT_ID}&text={msg}&reply_to_message_id={msg_id}'    
-    resp = requests.get(tarUrl)
 
 def delete_msg(msg_id):
     tarUrl =URL+ f'/deleteMessage?chat_id={CHAT_ID}&message_id={msg_id}'    
@@ -68,9 +66,7 @@ def get_latest():
     delete_msg(msg_id)
     clear_latest(update_id+1)
     run_cmd(ar_txt)
-
-#    print(f'{date} id={msg_id} {msg_txt}')
-    return update_id     
+    return update_id
 
 def clear_latest(update_id):
     tarUrl = f'{URL}/getUpdates?offset={update_id}'
@@ -93,9 +89,23 @@ def get_updates():
             send_msg("Received",msg_id)
         print(f"{date} {msg}")
 
+def get_ip():
+    result=[l for l in ([ip for ip in socket.gethostbyname_ex(socket.gethostname())[2] 
+    if not ip.startswith("127.")][:1], [[(s.connect(('8.8.8.8', 53)), 
+    s.getsockname()[0], s.close()) for s in [socket.socket(socket.AF_INET, 
+    socket.SOCK_DGRAM)]][0][1]]) if l][0][0]
+    return result
 
+def get_ext_ip():
+    ext_ip = str(urlopen('https://api64.ipify.org/?format=text').read().decode())
+    return ext_ip
 
-
+def get_uptime():
+    tm = int(time.time()-psutil.boot_time()) 
+    d = int(tm/60/60/24)
+    h = int(tm / 60/60%24)
+    m = int(tm /60 % 60)
+    return f'{d:02}d.{h:02}h{m:02}m'
 
 def run_cmd(ar):
     print(ar)
@@ -127,3 +137,8 @@ def run_cmd(ar):
 if __name__ == '__main__':
    #get_updates()
    get_latest()
+   ip=get_ip()
+   wan_ip=get_ext_ip()
+   up = get_uptime()
+   s = f'ip={ip} wan={wan_ip} "{up}"'
+   send_msg(s) 
