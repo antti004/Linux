@@ -5,6 +5,8 @@ import urllib.parse
 import subprocess
 import os
 
+VERSION="1.0"
+
 TOKEN='301857222:AAGM2t25iCqIUYAVQT6yHdp8cR0wVJkMlHY' #aa_devices_bot
 #TOKEN='358875431:AAF_Xf2nHovO1iQ42lyczc5eN2egCpRh8XU' #aa_project_emu_bot
 URL = f"https://api.telegram.org/bot{TOKEN}"
@@ -17,7 +19,7 @@ HOSTNAME = socket.gethostname()
 #logging.basicConfig(level=logging.DEBUG,format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
 
-def send_message(text,reply_msg_id=0):
+def send_msg(text,reply_msg_id=0):
     tarUrl =URL+ f'/sendMessage'
     msg_txt = HOSTNAME+ " " +'\U00002b55'+ ' ' +text
     body = {'chat_id':CHAT_ID,'text':msg_txt}
@@ -62,7 +64,7 @@ def get_latest():
         print("not for this host")
         return 0
 
-    send_message("processing = "+ar_txt[1])
+    send_msg("processing = "+ar_txt[1])
     delete_msg(msg_id)
     clear_latest(update_id+1)
     run_cmd(ar_txt)
@@ -92,6 +94,9 @@ def get_updates():
         print(f"{date} {msg}")
 
 
+
+
+
 def run_cmd(ar):
     print(ar)
     if len(ar) < 1:
@@ -116,6 +121,8 @@ def run_cmd(ar):
        send_msg("upgradeing")
        os.system("apt get dist-upgrade -y &")
 
+    if cmd == 'ver' or cmd == 'version':
+       send_msg(f'version={VERSION}')
 
 if __name__ == '__main__':
    #get_updates()
