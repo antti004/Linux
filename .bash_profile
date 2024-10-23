@@ -8,14 +8,14 @@ export PATH=$PATH:$DOTNET_ROOT
 alias reload='source ~/.bashrc'
 
 #### Docker aliases
-alias dc-ip='docker inspect -f "{{.Name}} - {{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}" $(docker ps -aq)'
-alias dc-ps='docker ps --format="table {{.Names}}\t{{.Status}}\t{{.Ports}}"'
-alias dc-psall='docker ps -a --format="table {{.ID}}\t{{.Names}}\t{{.Image}}\t{{.Command}}\t{{.Status}}"'
+alias docker-ip='docker inspect -f "{{.Name}} - {{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}" $(docker ps -aq)'
+alias docker-ps='docker ps --format="table {{.Names}}\t{{.Status}}\t{{.Ports}}"'
+alias docker-psall='docker ps -a --format="table {{.ID}}\t{{.Names}}\t{{.Image}}\t{{.Command}}\t{{.Status}}"'
 
-alias dc-rm-img='docker rmi $(docker images -q)'
+alias docker-rm-img='docker rmi $(docker images -q)'
 alias dc-rm-containers='docker rmi -f$(docker ps -a -q)'
 # Docker images size
-alias dc-size="docker images --format 'table {{.Repository}}\t{{.Tag}}\t{{.ID}}\t{{.CreatedAt}}\t{{.Size}}'"
+alias docker-size="docker images --format 'table {{.Repository}}\t{{.Tag}}\t{{.ID}}\t{{.CreatedAt}}\t{{.Size}}'"
 
 
 # LOG files aliases
