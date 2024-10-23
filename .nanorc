@@ -7,4 +7,5 @@ set linenumbers
 set constantshow
 set positionlog
 
-
+set tabsize 4
+set tabstospaces
