@@ -57,3 +57,5 @@ if [ -f $HOME/.bashrc ]; then
 fi
 
 source ~/.bashrc
+source ~/.bash_profile
+
