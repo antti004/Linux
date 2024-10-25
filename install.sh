@@ -7,6 +7,6 @@ wget -q --show-progress https://github.com/antti004/Linux/raw/main/install.sh -O
 
 mkdir -p ~/.installers
 
-wget -q --show-progress  https://dot.net/v1/dotnet-install.sh -O ~/.installers/install-dotnet.sh
-wget -q --show-progress  https://dot.net/v1/dotnet-install.sh -O ~/.installers/install-docker.sh
+wget -q --show-progress  https://dot.net/v1/install-dotnet.sh -O ~/.installers/install-dotnet.sh
+wget -q --show-progress  https://dot.net/v1/install-docker.sh -O ~/.installers/install-docker.sh
 
