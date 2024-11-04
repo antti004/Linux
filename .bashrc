@@ -30,6 +30,9 @@ alias ...='cd ../..;pwd'
 alias ....='cd ../../..;pwd'
 
 
+# Setup fzf key bindings
+eval "$(fzf --bash)"
+
 
 ### Functions
 
