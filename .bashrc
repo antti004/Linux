@@ -32,6 +32,7 @@ alias ....='cd ../../..;pwd'
 
 # Setup fzf key bindings
 eval "$(fzf --bash)"
+EXPORT FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 
 ### Functions
