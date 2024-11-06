@@ -30,10 +30,6 @@ alias ...='cd ../..;pwd'
 alias ....='cd ../../..;pwd'
 
 
-# Setup fzf key bindings
-eval "$(fzf --bash)"
-EXPORT FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-
 
 ### Functions
 
@@ -59,4 +55,4 @@ function prompt_1(){
 
 prompt_1
 
-
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
