@@ -7,6 +7,7 @@ apt-get install -y zsh htop vim git tmux apt-transport-https zip unzip software-
 # File managers
 sudo apt install -y ncdu eza tree
 sudo apt install -y httpie
+sudo apt isntall -y fonts-jetbrains-mono
 
 sudo chsh -s $(which zsh) $USER
 
