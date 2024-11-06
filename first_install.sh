@@ -11,3 +11,7 @@ sh -c "echo Europe/Tallinn > /etc/timezone"
 rm -f /etc/localtime
 ln -sf /usr/share/zoneinfo/Europe/Tallinn /etc/localtime
 
+# install fzf (file finder)
+cd
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
