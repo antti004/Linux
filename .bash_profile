@@ -41,6 +41,7 @@ alias git-log='git log -n -5 --oneline --date=short'
 alias lc="ls --color=auto"
 
 alias ip-addr="ip -br -4 -c addr list"
+alias ip-ext="wget -qO- ipaddress.ai"
 
 # Node-Red (might need to use sudo)
 alias log-nodered="journalctl -f -u nodered -o cat"
