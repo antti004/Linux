@@ -5,7 +5,6 @@ set nohelp
 set linenumbers
 set constantshow
 set positionlog
-set guidestrip 80
 set mouse
 
 set tabsize 4
