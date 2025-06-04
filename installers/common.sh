@@ -14,3 +14,4 @@ ln -sf /usr/share/zoneinfo/Europe/Tallinn /etc/localtime
 echo "Install nessesary"
 apt install -y zsh htop vim git tmux apt-transport-https zip unzip software-properties-common multitail
 
+apt autoremove
