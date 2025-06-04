@@ -1,7 +1,7 @@
 #!/usr/bin/env bash shebang
-VERSION="2.0"
+VERSION="2.1"
 url_repo="https://api.github.com/repos/antti004/linux/contents"
-url_installers="https://github.com/antti004/LInux/raw/main/installers"
+url_installers="https://github.com/antti004/Linux/raw/main/installers"
 
 echo "Version $VERSION"
 
@@ -18,7 +18,7 @@ mkdir -p ~/.installers
 # Delete files from .installers
 rm ~/.installers/*
 
-curl "$url_repo/installers" |jq -r '.[].name' | while IFS= read -r name;
+curl "$url_repo/installers" | jq -r '.[].name' | while IFS= read -r name;
 do
   wget -q --show-progress "$url_installers/$name" -O- ~/.installers/$name
 done
