@@ -1,5 +1,5 @@
 #!/usr/bin/env bash shebang
-VERSION="2.1"
+VERSION="2.2"
 url_repo="https://api.github.com/repos/antti004/linux/contents"
 url_installers="https://github.com/antti004/Linux/raw/main/installers"
 
@@ -20,5 +20,5 @@ rm ~/.installers/*
 
 curl "$url_repo/installers" | jq -r '.[].name' | while IFS= read -r name;
 do
-  wget -q --show-progress "$url_installers/$name" -O- ~/.installers/$name
+  wget -q --show-progress "$url_installers/$name" -O ~/.installers/$name
 done
