@@ -1,5 +1,10 @@
 #!/usr/bin/env bash shebang
-echo Version 1.9
+VERSION="2.0"
+url_repo="https://api.github.com/repos/antti004/linux/contents"
+url_installers="https://github.com/antti004/LInux/raw/main/installers"
+
+echo "Version $VERSION"
+
 wget -q --show-progress https://github.com/antti004/Linux/raw/main/.bashrc -O ~/.bashrc
 wget -q --show-progress https://github.com/antti004/Linux/raw/main/.nanorc -O ~/.nanorc
 wget -q --show-progress https://github.com/antti004/Linux/raw/main/.zshrc -O ~/.zshrc
@@ -13,6 +18,7 @@ mkdir -p ~/.installers
 # Delete files from .installers
 rm ~/.installers/*
 
-wget -q --show-progress https://github.com/antti004/Linux/raw/main/installers/install-dotnet.sh -O ~/.installers/install-dotnet.sh
-wget -q --show-progress https://github.com/antti004/Linux/raw/main/installers/install-docker.sh -O ~/.installers/install-docker.sh
-
+curl "$url_repo/installers" |jq -r '.[].name' | while IFS= read -r name;
+do
+  wget -q --show-progress "$url_installers/$name" -O- ~/.installers/$name
+done
