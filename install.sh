@@ -1,9 +1,11 @@
 #!/usr/bin/env bash shebang
-VERSION="2.2"
+VERSION="2.3"
 url_repo="https://api.github.com/repos/antti004/linux/contents"
 url_installers="https://github.com/antti004/Linux/raw/main/installers"
 
 echo "Version $VERSION"
+
+sudo apt install -y jq curl
 
 wget -q --show-progress https://github.com/antti004/Linux/raw/main/.bashrc -O ~/.bashrc
 wget -q --show-progress https://github.com/antti004/Linux/raw/main/.nanorc -O ~/.nanorc
@@ -16,7 +18,7 @@ wget -q --show-progress https://github.com/antti004/Linux/raw/main/install.sh -O
 # Create directory .installers if not existsing
 mkdir -p ~/.installers
 # Delete files from .installers
-rm ~/.installers/*
+rm -f ~/.installers/* 2>/dev/null
 
 curl "$url_repo/installers" | jq -r '.[].name' | while IFS= read -r name;
 do
