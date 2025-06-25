@@ -7,13 +7,14 @@ echo "Version $VERSION"
 
 sudo apt install -y jq curl
 
+wget -q --show-progress https://github.com/antti004/Linux/raw/main/install.sh -O ~/install.sh
+
 wget -q --show-progress https://github.com/antti004/Linux/raw/main/.bashrc -O ~/.bashrc
 wget -q --show-progress https://github.com/antti004/Linux/raw/main/.nanorc -O ~/.nanorc
 wget -q --show-progress https://github.com/antti004/Linux/raw/main/.zshrc -O ~/.zshrc
 
 wget -q --show-progress https://github.com/antti004/Linux/raw/main/.bash_profile -O ~/.bash_profile
 wget -q --show-progress https://github.com/antti004/Linux/raw/main/.tmux.conf -O ~/.tmux.conf
-wget -q --show-progress https://github.com/antti004/Linux/raw/main/install.sh -O ~/install.sh
 
 # Create directory .installers if not existsing
 mkdir -p ~/.installers
