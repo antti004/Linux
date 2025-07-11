@@ -29,4 +29,4 @@ do
   wget -q --show-progress "$url_installers/$name" -O ~/.installers/$name
 done
 
-echo "Done"
+echo "Finished"
