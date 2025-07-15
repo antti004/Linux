@@ -1,0 +1,18 @@
+{
+  "name": ".bashrc",
+  "path": "dotfiles/.bashrc",
+  "sha": "58c9e3cac221f107cdec1f2de25b80e2513c9db3",
+  "size": 1488,
+  "url": "https://api.github.com/repos/antti004/Linux/contents/dotfiles/.bashrc?ref=main",
+  "html_url": "https://github.com/antti004/Linux/blob/main/dotfiles/.bashrc",
+  "git_url": "https://api.github.com/repos/antti004/Linux/git/blobs/58c9e3cac221f107cdec1f2de25b80e2513c9db3",
+  "download_url": "https://raw.githubusercontent.com/antti004/Linux/main/dotfiles/.bashrc",
+  "type": "file",
+  "content": "I2V4cG9ydCBQUk9NUFRfQ09NTUFORD3igJlSRVRSTl9WQUw9JD87IGlmIFsg\nLWYgL3RtcC9sYXN0b3V0cHV0LnRtcCBdOyB0aGVuIExBU1RfT1VUUFVUPSQo\nY2F0IC90bXAvbGFzdG91dHB1dC50bXApOyBybSAvdG1wL2xhc3RvdXRwdXQu\ndG1wOyBmaTsgbG9nZ2VyIC1TIDEwMDAwIC1wIGxvY2FsNi5kZWJ1ZyDigJx7\nXCJ1c2VyXCI6IFwiJCh3aG9hbWkpXCIsIFwicGF0aFwiOiBcIiQocHdkKVwi\nLCBcInBpZFwiOiBcIiQkXCIsIFwiYjY0X2NvbW1hbmRcIjogXCIkKGhpc3Rv\ncnkgMSB8IHNlZCDigJxzL15bIF0qWzDigJM5XVwrWyBdKi8vIiB8IGJhc2U2\nNCAtdzAgKVwiLCBcInN0YXR1c1wiOiBcIiRSRVRSTl9WQUxcIiwgXCJiNjRf\nb3V0cHV0XCI6IFwiJExBU1RfT1VUUFVUXCJ9IjsgdW5zZXQgTEFTVF9PVVRQ\nVVQ7CgojIyBIaXN0b3J5CiNJZ25vcmUgZHVwbGljYXRlIGNvbW1hbmRzIGlu\nIGhpc3RvcnkKSElTVENPTlRST0w9aWdub3JlZHVwcwpISVNUU0laRT0yMDAw\nCkhJU1RGSUxFU0laRT0yMDAwCnNob3B0IC1zIGhpc3RhcHBlbmQKCgojIyBD\nb2xvcnMKYmxrPSdcW1wwMzNbMDE7MzBtXF0nICAgIyBCbGFjawpyZWQ9J1xb\nXDAzM1swMTszMW1cXScgICAjIFJlZApncm49J1xbXDAzM1swMTszMm1cXScg\nICAjIEdyZWVuCnlsdz0nXFtcMDMzWzAxOzMzbVxdJyAgICMgWWVsbG93CmJs\ndT0nXFtcMDMzWzAxOzM0bVxdJyAgICMgQmx1ZQpwdXI9J1xbXDAzM1swMTsz\nNW1cXScgICAjIFB1cnBsZQpjeW49J1xbXDAzM1swMTszNm1cXScgICAjIEN5\nYW4Kd2h0PSdcW1wwMzNbMDE7MzdtXF0nICAgIyBXaGl0ZQpjbHI9J1xbXDAz\nM1swMG1cXScgICAgICAjIFJlc2V0CgoKCiMjIEFsaWFzZXMKIyBNb3ZlIHRv\nIHRoZSBwYXJlbnQgZm9sZGVyLgphbGlhcyAuLj0nY2QgLi47cHdkJwojIE1v\ndmUgdXAgdHdvIHBhcmVudCBmb2xkZXJzLgphbGlhcyAuLi49J2NkIC4uLy4u\nO3B3ZCcKIyBNb3ZlIHVwIHRocmVlIHBhcmVudCBmb2xkZXJzLgphbGlhcyAu\nLi4uPSdjZCAuLi8uLi8uLjtwd2QnCgoKCiMjIyBGdW5jdGlvbnMKCiMjIEdp\ndApmdW5jdGlvbiBnaXQtcHVzaCgpewogIGdpdCBhZGQgLgogIGdpdCBjb21t\naXQgLWEgLW0gIiQxIiAmJiAKICBnaXQgcHVzaAp9CgpmdW5jdGlvbiBiaWct\nZmlsZXMoKSB7CiAgICBkdSAtaCAteCAtcyAtLSAqIHwgc29ydCAtciAtaCB8\nIGhlYWQgLTIwOwp9CgpmdW5jdGlvbiBnaXRfYnJhbmNoKCkgewogICAgaWYg\nWyAtZCAuZ2l0IF0gOyB0aGVuCiAgICAgICAgcHJpbnRmICIlcyIgIigkKGdp\ndCBicmFuY2ggMj4gL2Rldi9udWxsIHwgYXdrICcvXCove3ByaW50ICQyfScp\nKSI7CiAgICBmaQp9CmZ1bmN0aW9uIHByb21wdF8xKCl7CiAgICBQUzE9JyR7\nZGViaWFuX2Nocm9vdDorKCRkZWJpYW5fY2hyb290KX0nJHtibHV9JyQoZ2l0\nX2JyYW5jaCknJHtwdXJ9JyBcVycke2dybn0nIFwkICcke2Nscn0KfQoKcHJv\nbXB0XzEKClsgLWYgfi8uZnpmLmJhc2ggXSAmJiBzb3VyY2Ugfi8uZnpmLmJh\nc2gK\n",
+  "encoding": "base64",
+  "_links": {
+    "self": "https://api.github.com/repos/antti004/Linux/contents/dotfiles/.bashrc?ref=main",
+    "git": "https://api.github.com/repos/antti004/Linux/git/blobs/58c9e3cac221f107cdec1f2de25b80e2513c9db3",
+    "html": "https://github.com/antti004/Linux/blob/main/dotfiles/.bashrc"
+  }
+}
