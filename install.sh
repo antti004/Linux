@@ -9,13 +9,16 @@ echo "Install jq and curl"
 sudo apt install -y jq curl
 sudo apt autoremove -y
 
-echo "Download dot files"
+echo "Download installer.sh"
 wget -q --show-progress https://github.com/antti004/Linux/raw/main/install.sh -O ~/install.sh
-wget -q --show-progress https://github.com/antti004/Linux/raw/main/dotfiles/.bashrc -O ~/.bashrc
-wget -q --show-progress https://github.com/antti004/Linux/raw/main/dotfiles/.nanorc -O ~/.nanorc
-wget -q --show-progress https://github.com/antti004/Linux/raw/main/dotfiles/.zshrc -O ~/.zshrc
-wget -q --show-progress https://github.com/antti004/Linux/raw/main/dotfiles/.bash_profile -O ~/.bash_profile
-wget -q --show-progress https://github.com/antti004/Linux/raw/main/dotfiles/.tmux.conf -O ~/.tmux.conf
+
+
+echo "Download dotfiles"
+curl "$url_repo/dotfiles" |jq -r '.[].name' |while IFS= read -r name;
+do
+  wget -q --show-progress "$url_repo/dotfiles/$name" -o ~/$name
+done
+
 
 echo "Create or clean .installers directory"
 # Create directory .installers if not existsing
