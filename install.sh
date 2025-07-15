@@ -11,11 +11,11 @@ sudo apt autoremove -y
 
 echo "Download dot files"
 wget -q --show-progress https://github.com/antti004/Linux/raw/main/install.sh -O ~/install.sh
-wget -q --show-progress https://github.com/antti004/Linux/raw/main/.bashrc -O ~/.bashrc
-wget -q --show-progress https://github.com/antti004/Linux/raw/main/.nanorc -O ~/.nanorc
-wget -q --show-progress https://github.com/antti004/Linux/raw/main/.zshrc -O ~/.zshrc
-wget -q --show-progress https://github.com/antti004/Linux/raw/main/.bash_profile -O ~/.bash_profile
-wget -q --show-progress https://github.com/antti004/Linux/raw/main/.tmux.conf -O ~/.tmux.conf
+wget -q --show-progress https://github.com/antti004/Linux/raw/main/dotfiles/.bashrc -O ~/.bashrc
+wget -q --show-progress https://github.com/antti004/Linux/raw/main/dotfiles/.nanorc -O ~/.nanorc
+wget -q --show-progress https://github.com/antti004/Linux/raw/main/dotfiles/.zshrc -O ~/.zshrc
+wget -q --show-progress https://github.com/antti004/Linux/raw/main/dotfiles/.bash_profile -O ~/.bash_profile
+wget -q --show-progress https://github.com/antti004/Linux/raw/main/dotfiles/.tmux.conf -O ~/.tmux.conf
 
 echo "Create or clean .installers directory"
 # Create directory .installers if not existsing
