@@ -1,5 +1,5 @@
 #!/usr/bin/env bash shebang
-VERSION="26"
+VERSION="27"
 url_repo="https://api.github.com/repos/antti004/linux/contents"
 url_installers="https://github.com/antti004/Linux/raw/main/installers"
 
