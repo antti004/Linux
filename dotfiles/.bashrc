@@ -1,4 +1,4 @@
-#Version 1
+#Version 2
 #export PROMPT_COMMAND=’RETRN_VAL=$?; if [ -f /tmp/lastoutput.tmp ]; then LAST_OUTPUT=$(cat /tmp/lastoutput.tmp); rm /tmp/lastoutput.tmp; fi; logger -S 10000 -p local6.debug “{\"user\": \"$(whoami)\", \"path\": \"$(pwd)\", \"pid\": \"$$\", \"b64_command\": \"$(history 1 | sed “s/^[ ]*[0–9]\+[ ]*//" | base64 -w0 )\", \"status\": \"$RETRN_VAL\", \"b64_output\": \"$LAST_OUTPUT\"}"; unset LAST_OUTPUT;
 
 ## History
@@ -52,6 +52,15 @@ function git_branch() {
 }
 function prompt_1(){
     PS1='${debian_chroot:+($debian_chroot)}'${blu}'$(git_branch)'${pur}' \W'${grn}' \$ '${clr}
+}
+
+# Download all files in git directory
+function git-download-dir(){
+  printf "Download from '$1'"
+  curl $1 | jq -r '.[].name' | while IFS= read -r name;
+  do
+    wget -q --show-progress "$1/$name" -O ./$name
+  done
 }
 
 prompt_1
