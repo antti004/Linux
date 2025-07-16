@@ -57,9 +57,9 @@ function prompt_1(){
 # Download all files in git directory
 function git-download-dir(){
   printf "Download from '$1'"
-  curl $1 | jq -r '.[].name' | while IFS= read -r name;
+  curl $1 | jq -r '.[].download_url' | while IFS= read -r download_url;
   do
-    wget -q --show-progress "$1/$name" -O ./$name
+    wget -q --show-progress "$download_url"
   done
 }
 
