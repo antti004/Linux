@@ -6,7 +6,7 @@ url_installers="https://github.com/antti004/Linux/raw/main/installers"
 echo "Version $VERSION"
 
 echo "Install jq and curl"
-sudo apt install -y jq curl unzip
+sudo apt install -y jq curl unzip tree tre-command
 sudo apt install -y bc coreutils gawk playerctl
 sudo apt autoremove -y
 
