@@ -30,7 +30,9 @@ alias ...='cd ../..;pwd'
 # Move up three parent folders.
 alias ....='cd ../../..;pwd'
 
-
+# Treeview
+alias ll='exa -l --color=always --group-directories-first' 
+alias dir='exa -l --color=always --group-directories-first' 
 
 ### Functions
 
