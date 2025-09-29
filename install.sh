@@ -1,9 +1,7 @@
 #!/usr/bin/env bash shebang
-VERSION="28"
+VERSION="29"
 url_repo="https://api.github.com/repos/antti004/linux/contents"
 url_installers="https://github.com/antti004/Linux/raw/main/installers"
-
-echo "Version $VERSION"
 
 if [ $1 = 'upgrade' ]; then
   echo "Download only install.sh"
@@ -11,6 +9,12 @@ if [ $1 = 'upgrade' ]; then
   exit 1
 fi
 
+if [ $1 = 'version' ]; then
+  echo "Version $VERSION"
+  exit 1
+fi
+
+echo "Version $VERSION"
 
 echo "Install jq and curl"
 sudo apt install -y jq curl unzip tree tre-command exa duf
@@ -24,8 +28,11 @@ wget -q -N --show-progress https://github.com/antti004/Linux/raw/main/install.sh
 echo "Download dotfiles"
 curl "$url_repo/dotfiles" |jq -r '.[].name' |while IFS= read -r name;
 do
-  wget -q -N --show-progress "$url_repo/dotfiles/$name" -o ~/$name
+  # wget -q --show-progress "$url_repo/dotfiles/$name" -o ~/$name
+  curl "$url_repo/dotfiles/$name" > ~/$name
+
 done
+
 
 
 echo "Create or clean .installers directory"
