@@ -5,6 +5,13 @@ url_installers="https://github.com/antti004/Linux/raw/main/installers"
 
 echo "Version $VERSION"
 
+if [ $1 = 'upgrade' ]; then
+  echo "Download only install.sh"
+  wget -q -N --show-progress https://github.com/antti004/Linux/raw/main/install.sh -O ~/install.sh
+  exit 1
+fi
+
+
 echo "Install jq and curl"
 sudo apt install -y jq curl unzip tree tre-command exa duf
 sudo apt install -y bc coreutils gawk playerctl
