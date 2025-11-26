@@ -1,7 +1,8 @@
 #!/usr/bin/env bash shebang
-VERSION="30"
+VERSION="31"
 url_repo="https://api.github.com/repos/antti004/linux/contents"
 url_installers="https://github.com/antti004/Linux/raw/main/installers"
+url_raw="https://github.com/antti004/Linux/raw/main"
 
 if [ "$1" = "upgrade" ]; then
   echo "Download only install.sh"
@@ -29,8 +30,8 @@ echo "Download dotfiles"
 curl "$url_repo/dotfiles" |jq -r '.[].name' |while IFS= read -r name;
 do
   # wget -q --show-progress "$url_repo/dotfiles/$name" -o ~/$name
-  curl "$url_repo/dotfiles/$name" > ~/$name
-
+#  curl "$url_repo/dotfiles/$name" > ~/$name
+  wget -q -N --show-progress "$url_raw/dotfiles/$name" -O  ~/$name
 done
 
 
