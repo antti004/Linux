@@ -1,15 +1,15 @@
 #!/usr/bin/env bash shebang
-VERSION="29"
+VERSION="30"
 url_repo="https://api.github.com/repos/antti004/linux/contents"
 url_installers="https://github.com/antti004/Linux/raw/main/installers"
 
-if [ $1 = 'upgrade' ]; then
+if [ "$1" = "upgrade" ]; then
   echo "Download only install.sh"
   wget -q -N --show-progress https://github.com/antti004/Linux/raw/main/install.sh -O ~/install.sh
   exit 1
 fi
 
-if [ $1 = 'version' ]; then
+if [ "$1" = "version" ]; then
   echo "Version $VERSION"
   exit 1
 fi
@@ -17,7 +17,7 @@ fi
 echo "Version $VERSION"
 
 echo "Install jq and curl"
-sudo apt install -y jq curl unzip tree tre-command exa duf
+sudo apt install -y jq curl unzip tree tre-command eza duf
 sudo apt install -y bc coreutils gawk playerctl
 sudo apt autoremove -y
 
