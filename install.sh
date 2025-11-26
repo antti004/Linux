@@ -1,5 +1,5 @@
 #!/usr/bin/env bash shebang
-VERSION="31"
+VERSION="32"
 url_repo="https://api.github.com/repos/antti004/linux/contents"
 url_installers="https://github.com/antti004/Linux/raw/main/installers"
 url_raw="https://github.com/antti004/Linux/raw/main"
@@ -47,5 +47,18 @@ curl "$url_repo/installers" | jq -r '.[].name' | while IFS= read -r name;
 do
   wget -q -N --show-progress "$url_installers/$name" -O ~/.installers/$name
 done
+
+## Utilities
+mkdir -p ~/utils
+rm -f ~/utils/* 2>/dev/null
+curl "$url_repo/utils" | jq -r '.[].name' | while IFS= read -r name;
+do
+  wget -q -N --show-progress "$url_raw/utils/$name" -O ~/utils/$name
+done
+
+
+
+
+
 
 echo "Finished"
