@@ -1,5 +1,5 @@
 #!/usr/bin/env bash shebang
-VERSION="32"
+VERSION="33"
 url_repo="https://api.github.com/repos/antti004/linux/contents"
 url_installers="https://github.com/antti004/Linux/raw/main/installers"
 url_raw="https://github.com/antti004/Linux/raw/main"
@@ -19,6 +19,7 @@ echo "Version $VERSION"
 
 echo "Install jq and curl"
 sudo apt install -y jq curl unzip tree tre-command eza duf
+sudo apt install -y btop
 sudo apt install -y bc coreutils gawk playerctl
 sudo apt autoremove -y
 
