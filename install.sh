@@ -19,7 +19,7 @@ echo "Version $VERSION"
 
 echo "Install jq and curl"
 sudo apt install -y jq curl unzip tree tre-command eza duf
-sudo apt install -y btop multitail tmux ripgrep
+sudo apt install -y btop multitail tmux ripgrep fzf
 sudo apt install -y bc coreutils gawk playerctl
 sudo apt autoremove -y
 
