@@ -1,3 +1,5 @@
+https://raw.githubusercontent.com/antti004/Linux/refs/heads/main/install.sh
+
 # Linux
 Typical linux configuration
 
